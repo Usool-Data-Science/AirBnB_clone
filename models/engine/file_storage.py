@@ -63,3 +63,13 @@ class FileStorage():
             return py_obj
         except Exception as e:
             pass
+
+    def destroy(self, key):
+        """Deletes a key from the storage"""
+        del(self.__objects[key])
+        dico = {}
+        with open(self.__file_path, 'w') as f:
+            for k, v in self.__objects.items():
+                dico[k] = v.to_dict()
+            json.dump(dico, f)
+

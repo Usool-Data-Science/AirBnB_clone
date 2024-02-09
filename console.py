@@ -52,18 +52,19 @@ class HBNBCommand(cmd.Cmd):
         if not line[0]:
             print("** class name missing **")
         elif len(line) == 1:
-            print("** instance id missing **")
+            if line[0] not in self.classes:
+                print("** class doesn't exist **")
+            else:
+                print("** instance id missing **")
         elif len(line) >= 1 and line[0] not in self.classes:
             print("** class doesn't exist **")
         else:
             key = '.'.join([line[0], line[1]])
-            storage = models.storage.all()
+            storage = models.storage
             try:
-                del(storage["key"])
-                storage.save()
+                storage.destroy(key)
             except KeyError as err:
-                #print("** no instance found **")
-                print(err)
+                print("** no instance found **")
 
     def do_quit(self, line):
         """Handle the quit command"""
