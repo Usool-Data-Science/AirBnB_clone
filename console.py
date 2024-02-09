@@ -66,6 +66,17 @@ class HBNBCommand(cmd.Cmd):
             except KeyError as err:
                 print("** no instance found **")
 
+    def do_all(self, line):
+        """Prints all string representation of all instances
+           based or not on the class name.
+        """
+        line = self.parseline(line)[-1].split(" ")
+        if len(line) >= 1 and line[0] and line[0] not in self.classes:
+            print("** class doesn't exist")
+        # for all key, value in storage.__objects, retrieve value
+        storage = [v.__repr__() for k,v in models.storage.all().items()]
+        print(storage)
+
     def do_quit(self, line):
         """Handle the quit command"""
         return True

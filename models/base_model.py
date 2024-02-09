@@ -38,6 +38,11 @@ class BaseModel():
         return("[{}] ({}) {}".format(
                self.__class__.__name__, self.id, self.__dict__))
 
+    def __repr__(self):
+        """Return official representation of the object."""
+        return "[{}] ({}) {}".format(self.__class__.__name__,
+            self.id, self.__dict__)
+
     def save(self):
         """Updates the public instance attribute updated_at
            with current datetime. If the object is newly created,
