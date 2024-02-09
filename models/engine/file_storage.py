@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import json
+from models.base_model import BaseModel
 """
 A serialization and deserialization module
 """
@@ -27,14 +28,18 @@ class FileStorage():
         """
         if obj:
             key = '.'.join([obj.__class__.__name__, obj.id])
-            self.__objects.update({key: obj.__dict__})
+            self.__objects[key] = obj
 
     def save(self):
         """
-        Dumps the __object dictionary into a JSON file.
+        First convert all obj in the __object to dict, then
+        dumps the __object dictionary into a JSON file.
         """
-        with open(self.__file_path, 'w') as f:            
-            json.dump(self.__objects, f)
+        with open(self.__file_path, 'w') as f:
+            dico = {}
+            for k,v in self.__objects.items():
+                dico[k] = v.to_dict()
+            json.dump(dico, f)
 
     def reload(self):
         """
@@ -43,7 +48,8 @@ class FileStorage():
         try:
             with open(self.__file_path, 'r') as f:
                 py_obj = json.load(f)
-                self.__objects.update(py_obj)
+                for k,v in py_obj.items():
+                    self.__objects[k] = BaseModel(**v)
             return py_obj
-        except:
+        except Exception as e:
             pass
