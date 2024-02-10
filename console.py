@@ -13,7 +13,7 @@ class HBNBCommand(cmd.Cmd):
     A blueprint for our command line interface.
     """
     prompt = "(hbnb) "
-    classes = ['BaseModel', 'FileStorage']
+    classes = ['BaseModel', 'FileStorage', 'State','City', 'Amenity', 'Place', 'Review']
     def do_create(self, line):
         """Creates a new instance of BaseModel,
            saves it and then print it's ID.

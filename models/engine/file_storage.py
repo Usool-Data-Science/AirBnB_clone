@@ -28,7 +28,6 @@ class FileStorage():
         """
         if obj:
             key = '.'.join([obj.__class__.__name__, obj.id])
-            print("Created at type in new: {}".format(type(obj.created_at)))
             self.__objects[key] = obj
 
     def save(self):
@@ -61,8 +60,6 @@ class FileStorage():
                     to convert into datetime appropriately.
                     '''
                     self.__objects[k] = BaseModel(**v)
-                    obj_check = self.__objects[k]
-                    print("Create_at after import: {}".format(type(obj_check['created_at'])))
                 return py_obj
         except Exception as e:
             pass
