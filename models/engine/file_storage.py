@@ -28,6 +28,7 @@ class FileStorage():
         """
         if obj:
             key = '.'.join([obj.__class__.__name__, obj.id])
+            print("Created at type in new: {}".format(type(obj.created_at)))
             self.__objects[key] = obj
 
     def save(self):
@@ -35,7 +36,7 @@ class FileStorage():
         First convert all obj in the __object to dict, then
         dumps the __object dictionary into a JSON file.
         """
-        with open(self.__file_path, 'w') as f:
+        with open(self.__file_path, 'w', encoding='UTF-8') as f:
             dico = {}
             for k,v in self.__objects.items():
                 dico[k] = v.to_dict()
@@ -46,7 +47,7 @@ class FileStorage():
         Quietly load the JSON back into a python object.
         """
         try:
-            with open(self.__file_path, 'r') as f:
+            with open(self.__file_path, 'r', encoding='UTF-8') as f:
                 py_obj = json.load(f)
                 for k,v in py_obj.items():
                     '''
@@ -60,7 +61,9 @@ class FileStorage():
                     to convert into datetime appropriately.
                     '''
                     self.__objects[k] = BaseModel(**v)
-            return py_obj
+                    obj_check = self.__objects[k]
+                    print("Create_at after import: {}".format(type(obj_check['created_at'])))
+                return py_obj
         except Exception as e:
             pass
 
@@ -73,3 +76,8 @@ class FileStorage():
                 dico[k] = v.to_dict()
             json.dump(dico, f)
 
+    def update(self, id_, key_, value_):
+        """Updates a key with new value"""
+        obj = self.__objects.get(id_)
+        if obj:
+            setattr(obj, key_, value_)

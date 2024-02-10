@@ -58,11 +58,14 @@ class BaseModel():
         """
         dico = self.__dict__
         dico.update({'__class__': self.__class__.__name__})
-        dico['created_at'] = str(self.created_at.isoformat())
-        if 'update_at' in dico:
-            dico['updated_at'] = str(self.updated_at.isoformat())
+        if isinstance(self.created_at, datetime.datetime):
+            dico['created_at'] = self.created_at.isoformat()
+        if 'updated_at' in dico and isinstance(self.updated_at, datetime.datetime):
+            dico['updated_at'] = self.updated_at.isoformat()
+        elif 'update_at' in dico and isinstance(self.update_at, str):
+            dico['updated_at'] = self.updated_at
         else:
             now = datetime.datetime.now()
-            dico['updated_at'] = str(now.isoformat())
+            dico['updated_at'] = now.isoformat()
 
         return dico

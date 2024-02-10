@@ -74,8 +74,38 @@ class HBNBCommand(cmd.Cmd):
         if len(line) >= 1 and line[0] and line[0] not in self.classes:
             print("** class doesn't exist")
         # for all key, value in storage.__objects, retrieve value
-        storage = [v.__repr__() for k,v in models.storage.all().items()]
+        storage = models.storage.all()
+        storage = [v.__repr__() for k,v in storage.items()]
         print(storage)
+
+    def do_update(self, line):
+        """
+        Updates an instance based on the class name
+        Usage: <class name> <id> <attribute name> '<attribute value>'
+        """
+        #retrieve only 4 arguments from the line
+        line = self.parseline(line)[-1].split(" ")[:4]
+        id_ = '.'.join([line[0], line[1]])
+        storage = models.storage
+        if not line[0]:
+            print("** class name missing **")
+        elif len(line) == 1:
+            if line[0] not in self.classes:
+                print("** class name doesn't exist **")
+            else:
+                print("** instance id missing **")
+        elif len(line) >= 1 and line[0] not in self.classes:
+            print("** class doesn't exist **")
+        elif len(line) > 2 and not line[2]:
+            print("** attribute name missing **")
+        elif len(line) < 4:
+            print("** value missing **")
+        else:
+            try:
+                storage.update(id_, line[2], line[3])
+                storage.save()
+            except KeyError:
+                print("** value missing **")
 
     def do_quit(self, line):
         """Handle the quit command"""
