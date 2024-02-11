@@ -11,6 +11,6 @@ class Review(base_model.BaseModel):
     user_id = ''
     text = ''
 
-    def __init__(*args, **kwargs):
+    def __init__(self, *args, **kwargs):
         """Initializes the object"""
-        super.__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)

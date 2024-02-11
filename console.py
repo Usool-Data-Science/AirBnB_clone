@@ -4,16 +4,28 @@ A command line module that handles user request.
 """
 import cmd
 import models
+from models import State
+from models import City
+from models import Amenity
+from models import Place
+from models import Review
+from models import User
 
-#classes = {'BaseModel':models.base_model.BaseModel,
-#           'FileStorage':models.engine.file_storage}
 
 class HBNBCommand(cmd.Cmd):
     """
     A blueprint for our command line interface.
     """
     prompt = "(hbnb) "
-    classes = ['BaseModel', 'FileStorage', 'State','City', 'Amenity', 'Place', 'Review']
+    classes = {'BaseModel': models.base_model.BaseModel,
+        'FileStorage': models.engine.file_storage.FileStorage,
+        'State': State,
+        'City': City,
+        'Amenity': Amenity,
+        'Place': Place,
+        'Review': Review,
+        'User': User}
+
     def do_create(self, line):
         """Creates a new instance of BaseModel,
            saves it and then print it's ID.
@@ -23,7 +35,8 @@ class HBNBCommand(cmd.Cmd):
         elif line not in self.classes:
             print("** class doesn't exist **")
         else:
-            model = models.base_model.BaseModel()
+            class_ = self.classes[line]
+            model = class_()
             model.save()
             print(model.id)
     

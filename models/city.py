@@ -11,6 +11,6 @@ class City(base_model.BaseModel):
     name = ''
     state = uuid.uuid4()
 
-    def __init__(*args, **kwargs):
+    def __init__(self, *args, **kwargs):
         """Initializes the object"""
-        super.__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)

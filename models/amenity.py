@@ -9,6 +9,6 @@ class Amenity(base_model.BaseModel):
     """A blue print for creating a state object"""
     name = ''
 
-    def __init__(*args, **kwargs):
+    def __init__(self, *args, **kwargs):
         """Initializes the object"""
-        super.__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
