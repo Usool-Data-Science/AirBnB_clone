@@ -37,7 +37,7 @@ class FileStorage():
         """
         with open(self.__file_path, 'w', encoding='UTF-8') as f:
             dico = {}
-            for k,v in self.__objects.items():
+            for k, v in self.__objects.items():
                 dico[k] = v.to_dict()
             json.dump(dico, f)
 
@@ -48,7 +48,7 @@ class FileStorage():
         try:
             with open(self.__file_path, 'r', encoding='UTF-8') as f:
                 py_obj = json.load(f)
-                for k,v in py_obj.items():
+                for k, v in py_obj.items():
                     '''
                     For each of the key in the JSON file, recreate
                     the BaseModel. **v indicates that we are passing

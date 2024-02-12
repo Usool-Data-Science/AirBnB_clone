@@ -3,7 +3,7 @@
 A module that creates a state with it attributes
 """
 import uuid
-from models import  base_model
+from models import base_model
 
 
 class City(base_model.BaseModel):

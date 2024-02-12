@@ -2,7 +2,7 @@
 """
 A module that creates a state with it attributes
 """
-from models import  base_model
+from models import base_model
 
 
 class Review(base_model.BaseModel):

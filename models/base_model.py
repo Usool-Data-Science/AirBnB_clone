@@ -41,7 +41,7 @@ class BaseModel():
     def __repr__(self):
         """Return official representation of the object."""
         return "[{}] ({}) {}".format(self.__class__.__name__,
-            self.id, self.__dict__)
+                                     self.id, self.__dict__)
 
     def save(self):
         """Updates the public instance attribute updated_at
@@ -60,7 +60,8 @@ class BaseModel():
         dico.update({'__class__': self.__class__.__name__})
         if isinstance(self.created_at, datetime.datetime):
             dico['created_at'] = self.created_at.isoformat()
-        if 'updated_at' in dico and isinstance(self.updated_at, datetime.datetime):
+        if 'updated_at' in dico and isinstance(
+                self.updated_at, datetime.datetime):
             dico['updated_at'] = self.updated_at.isoformat()
         elif 'update_at' in dico and isinstance(self.update_at, str):
             dico['updated_at'] = self.updated_at
