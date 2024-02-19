@@ -1,0 +1,1 @@
+This is the webstatic part of the AirBnB project. It contains the front end structure of the project, which includes the HTML/CSS that helps in building the basic structure and styling of the page.
