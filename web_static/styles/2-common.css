@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 
 body {
   margin: 0;
   padding: 0;
 }
+=======
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    text-align: center;
+    padding: 10px auto
+}
+>>>>>>> cee833d2e92e80db04476dd7b14da2929e395489

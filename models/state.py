@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-"""Defines the state class."""
-from models.base_model import BaseModel
+"""
+A module that creates a state with it attributes
+"""
+from models import base_model
 
 
-class State(BaseModel):
-    """Represent a state.
+class State(base_model.BaseModel):
+    """A blue print for creating a state object"""
+    name = ''
 
-    Attributes:
-        name (str): The name of the state.
-    """
-
-    name = ""
+    def __init__(self, *args, **kwargs):
+        """Initializes the object"""
+        super().__init__(*args, **kwargs)

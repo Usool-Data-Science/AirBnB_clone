@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 header {
     background-color: white;
     height: 70px;
@@ -13,3 +14,17 @@ header .logo {
     background: url("../images/logo.png") no-repeat center;
     padding-left: 20px;
 }
+=======
+header {
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.logo {
+    background: url('../images/HBnB\ Logo.png') no-repeat;
+    height: 100%;
+    margin-left: auto auto 20px auto;
+}
+>>>>>>> cee833d2e92e80db04476dd7b14da2929e395489

@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-"""Defines the City class."""
-from models.base_model import BaseModel
+"""
+A module that creates a state with it attributes
+"""
+import uuid
+from models import base_model
 
 
-class City(BaseModel):
-    """Represent a city.
+class City(base_model.BaseModel):
+    """A blue print for creating a state object"""
+    name = ''
+    state = uuid.uuid4()
 
-    Attributes:
-        state_id (str): The state id.
-        name (str): The name of the city.
-    """
-
-    state_id = ""
-    name = ""
+    def __init__(self, *args, **kwargs):
+        """Initializes the object"""
+        super().__init__(*args, **kwargs)

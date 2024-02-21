@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-"""Defines the User class."""
-from models.base_model import BaseModel
+"""
+A module for creating User object.
+"""
+import uuid
+from models import base_model
 
 
-class User(BaseModel):
-    """Represent a User.
+class User(base_model.BaseModel):
+    """A blue print for creating a User object"""
+    id = uuid.uuid4()
+    email = ''
+    password = ''
+    first_name = ''
+    last_name = ''
 
-    Attributes:
-        email (str): The email of the user.
-        password (str): The password of the user.
-        first_name (str): The first name of the user.
-        last_name (str): The last name of the user.
-    """
-
-    email = ""
-    password = ""
-    first_name = ""
-    last_name = ""
+    def __init__(self, *args, **kwargs):
+        """Initializes the User class"""
+        super().__init__(*args, **kwargs)

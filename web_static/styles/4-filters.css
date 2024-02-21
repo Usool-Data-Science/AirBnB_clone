@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .filter{
 background-color: white;
     height: 70px;
@@ -24,3 +25,30 @@ section.filters button{
 section.filters button:hover{
     opacity: 0.9;
 }
+=======
+.filters {
+    color: white;
+    height: 70px;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    position: relative;
+}
+
+button {
+    font-size: 18px;
+    background-color: #FF5A5F;
+    color: #FFFFFF;
+    height: 48px;
+    width: 20%;
+    border-radius: 4px;
+    top: .5rem;
+    right: 30px;
+    border-style: none;
+    position: absolute;
+}
+
+button:hover {
+    opacity: 90%;
+}
+>>>>>>> cee833d2e92e80db04476dd7b14da2929e395489
