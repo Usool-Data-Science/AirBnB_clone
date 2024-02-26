@@ -1,9 +1,55 @@
-<mxfile host="app.diagrams.net" modified="2024-02-25T23:35:02.285Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" version="23.1.6" etag="tHs917bY05jjE8LeZxfL" type="github">
+<mxfile host="app.diagrams.net" modified="2024-02-26T00:26:38.768Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="F5751m7chN27jFNPWxVK" version="23.1.6" type="github">
   <diagram name="Page-1" id="pmiSBKkRx81IRbAEILlO">
-    <mxGraphModel>
+    <mxGraphModel dx="832" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="ov2lPPs_vxz2AfiCay28-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ov2lPPs_vxz2AfiCay28-2" target="ov2lPPs_vxz2AfiCay28-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-13" value="End User&amp;nbsp;&lt;br&gt;Inputs domain&lt;br&gt;name into browser" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ov2lPPs_vxz2AfiCay28-6">
+          <mxGeometry x="0.098" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-2" value="End User" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#01A88D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.desktop_and_app_streaming;" vertex="1" parent="1">
+          <mxGeometry x="30" y="80" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ov2lPPs_vxz2AfiCay28-3" target="ov2lPPs_vxz2AfiCay28-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-3" value="Internet" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/internet_cloud.svg;" vertex="1" parent="1">
+          <mxGeometry x="450.96" y="97.25" width="69.04" height="43.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ov2lPPs_vxz2AfiCay28-4" target="ov2lPPs_vxz2AfiCay28-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-26" value="Sends HTTP&lt;br&gt;Request to&lt;br&gt;an IP add." style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ov2lPPs_vxz2AfiCay28-14">
+          <mxGeometry x="-0.1624" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-4" value="Browser" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Browser.svg;" vertex="1" parent="1">
+          <mxGeometry x="260" y="84" width="87.5" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-16" value="Application Server" style="image;html=1;image=img/lib/clip_art/computers/Server_Rack_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="710" y="80" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ov2lPPs_vxz2AfiCay28-17" target="ov2lPPs_vxz2AfiCay28-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-17" value="Web Server" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="570" y="80" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-18" value="Data Base" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="221" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-19" value="Code Base" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.source_code;" vertex="1" parent="1">
+          <mxGeometry x="650" y="221" width="43.12" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-27" value="&lt;h3 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;EXPLANATION&lt;/font&gt;&lt;/span&gt;&lt;/h3&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;The end user inputs a domain name into the browser, the browser/OS caches their cache to translate the domain name to IP addresses, if not found, they contact resolver for the IP address. The user requests are packaged into an HTTP packet sent over the internet to the obtained Ip address corresponding to the desired server. The web server then responds with the appropriate HTTP response if available, otherwise it contacts the app server for dynamic processing of the request using the servlet request.&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="200" width="481" height="130" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
