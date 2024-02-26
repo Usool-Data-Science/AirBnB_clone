@@ -1,54 +1,229 @@
-<mxfile host="app.diagrams.net" modified="2024-02-26T00:26:38.768Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="F5751m7chN27jFNPWxVK" version="23.1.6" type="github">
+<mxfile host="app.diagrams.net" modified="2024-02-26T10:09:36.057Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="RkFRUw2tLfDWxQ-nlUS6" version="23.1.6" type="github">
   <diagram name="Page-1" id="pmiSBKkRx81IRbAEILlO">
-    <mxGraphModel dx="832" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="832" dy="481" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="ov2lPPs_vxz2AfiCay28-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ov2lPPs_vxz2AfiCay28-2" target="ov2lPPs_vxz2AfiCay28-4">
+        <mxCell id="ov2lPPs_vxz2AfiCay28-27" value="&lt;h3 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;EXPLANATION&lt;/font&gt;&lt;/span&gt;&lt;/h3&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;The end user inputs a domain name into the browser, the browser/OS caches their cache to translate the domain name to IP addresses, if not found, they contact resolver for the IP address.&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;The user requests are packaged into an HTTP packet sent over the internet to the obtained Ip address corresponding to the desired server. The request is met with a load balancer that direct each request to the available server (through a host-base firewall) based on the algorithm of the load balancer.&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;The web server then responds with the appropriate HTTP response if available, otherwise it contacts the app server for dynamic processing of the request using the servlet request.&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="27" y="305" width="353" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-32" value="A web infrastructure design for 3 servers,&lt;br&gt;3 firewalls,&amp;nbsp;1 load balancer,&amp;nbsp;1 web server (Nginx),&lt;br&gt;1 App server,&amp;nbsp;1 app file, 1 database" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="219" y="74" width="139" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-75" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="571" y="78" width="230.40613026819923" height="153" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-36" value="Server" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Server_Desktop.svg;" vertex="1" parent="ov2lPPs_vxz2AfiCay28-75">
+          <mxGeometry y="25.641975308641975" width="35.237037037037034" height="44.666666666666664" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-57" value="" style="group" vertex="1" connectable="0" parent="ov2lPPs_vxz2AfiCay28-75">
+          <mxGeometry x="94.40613026819923" width="136" height="153" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-58" value="Application Server" style="image;html=1;image=img/lib/clip_art/computers/Server_Rack_128x128.png" vertex="1" parent="ov2lPPs_vxz2AfiCay28-57">
+          <mxGeometry x="1.481072796934866" y="88.69857142857144" width="41.47003831417625" height="40.83809523809524" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ov2lPPs_vxz2AfiCay28-57" source="ov2lPPs_vxz2AfiCay28-61" target="ov2lPPs_vxz2AfiCay28-58">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ov2lPPs_vxz2AfiCay28-13" value="End User&amp;nbsp;&lt;br&gt;Inputs domain&lt;br&gt;name into browser" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ov2lPPs_vxz2AfiCay28-6">
-          <mxGeometry x="0.098" relative="1" as="geometry">
+        <mxCell id="ov2lPPs_vxz2AfiCay28-60" value="Servlet Request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ov2lPPs_vxz2AfiCay28-59">
+          <mxGeometry x="0.3827" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ov2lPPs_vxz2AfiCay28-2" value="End User" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#01A88D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.desktop_and_app_streaming;" vertex="1" parent="1">
-          <mxGeometry x="30" y="80" width="78" height="78" as="geometry" />
+        <mxCell id="ov2lPPs_vxz2AfiCay28-61" value="Web Server" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="ov2lPPs_vxz2AfiCay28-57">
+          <mxGeometry width="44.43218390804598" height="32.542857142857144" as="geometry" />
         </mxCell>
-        <mxCell id="ov2lPPs_vxz2AfiCay28-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ov2lPPs_vxz2AfiCay28-3" target="ov2lPPs_vxz2AfiCay28-17">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ov2lPPs_vxz2AfiCay28-3" value="Internet" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/internet_cloud.svg;" vertex="1" parent="1">
-          <mxGeometry x="450.96" y="97.25" width="69.04" height="43.5" as="geometry" />
-        </mxCell>
-        <mxCell id="ov2lPPs_vxz2AfiCay28-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ov2lPPs_vxz2AfiCay28-4" target="ov2lPPs_vxz2AfiCay28-3">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="ov2lPPs_vxz2AfiCay28-26" value="Sends HTTP&lt;br&gt;Request to&lt;br&gt;an IP add." style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ov2lPPs_vxz2AfiCay28-14">
-          <mxGeometry x="-0.1624" relative="1" as="geometry">
-            <mxPoint x="1" as="offset" />
+        <mxCell id="ov2lPPs_vxz2AfiCay28-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ov2lPPs_vxz2AfiCay28-57" source="ov2lPPs_vxz2AfiCay28-58" target="ov2lPPs_vxz2AfiCay28-61">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="22" y="59" />
+              <mxPoint x="98" y="59" />
+              <mxPoint x="98" y="16" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ov2lPPs_vxz2AfiCay28-4" value="Browser" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Browser.svg;" vertex="1" parent="1">
-          <mxGeometry x="260" y="84" width="87.5" height="70" as="geometry" />
+        <mxCell id="ov2lPPs_vxz2AfiCay28-63" value="Servlet&lt;br&gt;Response" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ov2lPPs_vxz2AfiCay28-62">
+          <mxGeometry x="0.3484" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="ov2lPPs_vxz2AfiCay28-16" value="Application Server" style="image;html=1;image=img/lib/clip_art/computers/Server_Rack_128x128.png" vertex="1" parent="1">
-          <mxGeometry x="710" y="80" width="80" height="80" as="geometry" />
+        <mxCell id="ov2lPPs_vxz2AfiCay28-64" value="Data Base" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="ov2lPPs_vxz2AfiCay28-57">
+          <mxGeometry x="92.57" y="117" width="43.43" height="36" as="geometry" />
         </mxCell>
-        <mxCell id="ov2lPPs_vxz2AfiCay28-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ov2lPPs_vxz2AfiCay28-17" target="ov2lPPs_vxz2AfiCay28-16">
+        <mxCell id="ov2lPPs_vxz2AfiCay28-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ov2lPPs_vxz2AfiCay28-57" source="ov2lPPs_vxz2AfiCay28-58" target="ov2lPPs_vxz2AfiCay28-64">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ov2lPPs_vxz2AfiCay28-17" value="Web Server" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
-          <mxGeometry x="570" y="80" width="80" height="80" as="geometry" />
+        <mxCell id="ov2lPPs_vxz2AfiCay28-66" value="Code Base" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.source_code;" vertex="1" parent="ov2lPPs_vxz2AfiCay28-57">
+          <mxGeometry x="96.59865900383143" y="65.08571428571429" width="17.25409523809524" height="23.60952380952381" as="geometry" />
         </mxCell>
-        <mxCell id="ov2lPPs_vxz2AfiCay28-18" value="Data Base" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="730" y="221" width="60" height="60" as="geometry" />
+        <mxCell id="ov2lPPs_vxz2AfiCay28-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ov2lPPs_vxz2AfiCay28-57" source="ov2lPPs_vxz2AfiCay28-58" target="ov2lPPs_vxz2AfiCay28-66">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ov2lPPs_vxz2AfiCay28-19" value="Code Base" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.source_code;" vertex="1" parent="1">
-          <mxGeometry x="650" y="221" width="43.12" height="59" as="geometry" />
+        <mxCell id="ov2lPPs_vxz2AfiCay28-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ov2lPPs_vxz2AfiCay28-75" source="ov2lPPs_vxz2AfiCay28-36" target="ov2lPPs_vxz2AfiCay28-61">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ov2lPPs_vxz2AfiCay28-27" value="&lt;h3 style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;EXPLANATION&lt;/font&gt;&lt;/span&gt;&lt;/h3&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;The end user inputs a domain name into the browser, the browser/OS caches their cache to translate the domain name to IP addresses, if not found, they contact resolver for the IP address. The user requests are packaged into an HTTP packet sent over the internet to the obtained Ip address corresponding to the desired server. The web server then responds with the appropriate HTTP response if available, otherwise it contacts the app server for dynamic processing of the request using the servlet request.&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="30" y="200" width="481" height="130" as="geometry" />
+        <mxCell id="ov2lPPs_vxz2AfiCay28-88" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="573" y="387" width="226" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-76" value="Server" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Server_Desktop.svg;" vertex="1" parent="ov2lPPs_vxz2AfiCay28-88">
+          <mxGeometry y="24.193121693121697" width="33.24603174603175" height="42.142857142857146" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-87" value="" style="group" vertex="1" connectable="0" parent="ov2lPPs_vxz2AfiCay28-88">
+          <mxGeometry x="103.02308399086871" width="122.97691600913132" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-77" value="Application Server" style="image;html=1;image=img/lib/clip_art/computers/Server_Rack_128x128.png" vertex="1" parent="ov2lPPs_vxz2AfiCay28-87">
+          <mxGeometry x="1.6162582527398526" y="79.46938775510205" width="45.25523107671614" height="38.53061224489796" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-78" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ov2lPPs_vxz2AfiCay28-87" source="ov2lPPs_vxz2AfiCay28-80" target="ov2lPPs_vxz2AfiCay28-77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-79" value="Servlet Request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ov2lPPs_vxz2AfiCay28-78">
+          <mxGeometry x="0.3827" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-80" value="Web Server" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="ov2lPPs_vxz2AfiCay28-87">
+          <mxGeometry width="48.487747582195865" height="30.70408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ov2lPPs_vxz2AfiCay28-87" source="ov2lPPs_vxz2AfiCay28-77" target="ov2lPPs_vxz2AfiCay28-80">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="24" y="55" />
+              <mxPoint x="111" y="55" />
+              <mxPoint x="111" y="15" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-82" value="Servlet&lt;br&gt;Response" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ov2lPPs_vxz2AfiCay28-81">
+          <mxGeometry x="0.3484" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ov2lPPs_vxz2AfiCay28-87" source="ov2lPPs_vxz2AfiCay28-77">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="101.14993700921654" y="113.16137566137567" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-84" value="Code Base" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.source_code;" vertex="1" parent="ov2lPPs_vxz2AfiCay28-87">
+          <mxGeometry x="103.4405281753512" y="61.40816326530615" width="16.27918367346939" height="22.275510204081634" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ov2lPPs_vxz2AfiCay28-87" source="ov2lPPs_vxz2AfiCay28-77" target="ov2lPPs_vxz2AfiCay28-84">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ov2lPPs_vxz2AfiCay28-88" source="ov2lPPs_vxz2AfiCay28-76" target="ov2lPPs_vxz2AfiCay28-80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-101" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="571" y="241" width="226" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-102" value="Server" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Server_Desktop.svg;" vertex="1" parent="ov2lPPs_vxz2AfiCay28-101">
+          <mxGeometry y="24.193121693121697" width="33.24603174603175" height="42.142857142857146" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-103" value="" style="group" vertex="1" connectable="0" parent="ov2lPPs_vxz2AfiCay28-101">
+          <mxGeometry x="103.02308399086871" width="122.97691600913132" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-104" value="Application Server" style="image;html=1;image=img/lib/clip_art/computers/Server_Rack_128x128.png" vertex="1" parent="ov2lPPs_vxz2AfiCay28-103">
+          <mxGeometry x="1.6162582527398526" y="79.46938775510205" width="45.25523107671614" height="38.53061224489796" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-105" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ov2lPPs_vxz2AfiCay28-103" source="ov2lPPs_vxz2AfiCay28-107" target="ov2lPPs_vxz2AfiCay28-104">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-106" value="Servlet Request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ov2lPPs_vxz2AfiCay28-105">
+          <mxGeometry x="0.3827" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-107" value="Web Server" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="ov2lPPs_vxz2AfiCay28-103">
+          <mxGeometry width="48.487747582195865" height="30.70408163265306" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ov2lPPs_vxz2AfiCay28-103" source="ov2lPPs_vxz2AfiCay28-104" target="ov2lPPs_vxz2AfiCay28-107">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="24" y="55" />
+              <mxPoint x="101" y="55" />
+              <mxPoint x="101" y="15" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-109" value="Servlet&lt;br&gt;Response" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ov2lPPs_vxz2AfiCay28-108">
+          <mxGeometry x="0.3484" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-111" value="Code Base" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.source_code;" vertex="1" parent="ov2lPPs_vxz2AfiCay28-103">
+          <mxGeometry x="103.4405281753512" y="61.40816326530615" width="16.27918367346939" height="22.275510204081634" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ov2lPPs_vxz2AfiCay28-103" source="ov2lPPs_vxz2AfiCay28-104" target="ov2lPPs_vxz2AfiCay28-111">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="ov2lPPs_vxz2AfiCay28-101" source="ov2lPPs_vxz2AfiCay28-102" target="ov2lPPs_vxz2AfiCay28-107">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-116" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="24" y="193" width="332" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-2" value="End User" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#01A88D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.desktop_and_app_streaming;" vertex="1" parent="ov2lPPs_vxz2AfiCay28-116">
+          <mxGeometry width="58.98861047835991" height="58.98861047835991" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-115" value="" style="group" vertex="1" connectable="0" parent="ov2lPPs_vxz2AfiCay28-116">
+          <mxGeometry x="96.04555808656036" y="3" width="235.95444191343964" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-4" value="Browser" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Browser.svg;" vertex="1" parent="ov2lPPs_vxz2AfiCay28-115">
+          <mxGeometry width="66.17312072892939" height="52.93849658314351" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-114" value="" style="group" vertex="1" connectable="0" parent="ov2lPPs_vxz2AfiCay28-115">
+          <mxGeometry x="111.17084282460137" y="13.25" width="124.78359908883827" height="43.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-3" value="Internet" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/internet_cloud.svg;" vertex="1" parent="ov2lPPs_vxz2AfiCay28-114">
+          <mxGeometry y="-3.23" width="52.212482915717544" height="32.89749430523918" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-69" value="Load Balance&lt;br&gt;(HAproxy)" style="fillColor=#999999;verticalLabelPosition=bottom;sketch=0;html=1;strokeColor=#ffffff;verticalAlign=top;align=center;points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];pointerEvents=1;shape=mxgraph.cisco_safe.compositeIcon;bgIcon=ellipse;resIcon=mxgraph.cisco_safe.capability.load_balancer;" vertex="1" parent="ov2lPPs_vxz2AfiCay28-114">
+          <mxGeometry x="92.26423690205011" y="-8.28" width="32.51936218678816" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-70" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ov2lPPs_vxz2AfiCay28-114" source="ov2lPPs_vxz2AfiCay28-3" target="ov2lPPs_vxz2AfiCay28-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ov2lPPs_vxz2AfiCay28-115" source="ov2lPPs_vxz2AfiCay28-4" target="ov2lPPs_vxz2AfiCay28-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="ov2lPPs_vxz2AfiCay28-116" source="ov2lPPs_vxz2AfiCay28-2" target="ov2lPPs_vxz2AfiCay28-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-131" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ov2lPPs_vxz2AfiCay28-125" target="ov2lPPs_vxz2AfiCay28-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-125" value="Firewall" style="image;html=1;image=img/lib/clip_art/networking/Firewall_02_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="461" y="399.26" width="67" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-132" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ov2lPPs_vxz2AfiCay28-126" target="ov2lPPs_vxz2AfiCay28-102">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-126" value="Firewall" style="image;html=1;image=img/lib/clip_art/networking/Firewall_02_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="461" y="253.26" width="67" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-133" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ov2lPPs_vxz2AfiCay28-127" target="ov2lPPs_vxz2AfiCay28-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-127" value="Firewall" style="image;html=1;image=img/lib/clip_art/networking/Firewall_02_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="461" y="135" width="67" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ov2lPPs_vxz2AfiCay28-69" target="ov2lPPs_vxz2AfiCay28-127">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ov2lPPs_vxz2AfiCay28-69" target="ov2lPPs_vxz2AfiCay28-126">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ov2lPPs_vxz2AfiCay28-69" target="ov2lPPs_vxz2AfiCay28-125">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-137" value="Data Base" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="775.9961302681993" y="351" width="43.43" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-138" value="Data Base" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="778.9961302681993" y="492" width="43.43" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="ov2lPPs_vxz2AfiCay28-141" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.7;entryDx=0;entryDy=0;" edge="1" parent="1" source="ov2lPPs_vxz2AfiCay28-104" target="ov2lPPs_vxz2AfiCay28-137">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
